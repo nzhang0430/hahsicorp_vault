@@ -17,6 +17,7 @@ resource "hcp_hvn" "main" {
   hvn_id         = "main-hvn"
   cloud_provider = "aws"
   region         = "us-west-2"
+  cidr_block     = "172.25.16.0/20"
 }
 
 resource "hcp_vault_cluster" "vault_free" {
