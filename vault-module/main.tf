@@ -3,8 +3,8 @@ provider "vault" {
   # and address pointing to your Vault instance.
 }
 
-resource "vault_namespace" "example" {
-  path = "example"
+resource "vault_namespace" "vault-namespace" {
+  path = "vault-namespace"
 }
 
 resource "vault_mount" "kv" {
