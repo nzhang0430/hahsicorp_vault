@@ -34,7 +34,7 @@ resource "vault_policy" "dev_secrets_policy" {
 }
 
 resource "vault_token_auth_backend_role" "dev_role" {
-  name        = "dev_role"
+  role_name = "dev_role"
   namespace   = vault_namespace.example.path
   token_policies = [vault_policy.dev_secrets_policy.name]
 }
