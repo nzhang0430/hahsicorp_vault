@@ -10,7 +10,7 @@ resource "vault_namespace" "vault-namespace" {
 resource "vault_mount" "kv" {
   path        = "secret"
   type        = "kv-v2"
-  namespace   = vault_namespace.example.path
+  namespace   = vault_namespace.vault-namespace.path
   description = "KV store for development environments"
 }
 
